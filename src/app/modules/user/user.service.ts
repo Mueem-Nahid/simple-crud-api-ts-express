@@ -27,26 +27,24 @@ const getSingleUser = (id: string): IUser | undefined => {
 };
 
 const updateUser = (id: string, payload: Partial<IUser>): IUser | null => {
-  let user = users.find(user => user.id === parseInt(id));
+  const user = users.find(user => user.id === parseInt(id));
   if (!user) {
     throw new ApiError(httpStatus.NOT_FOUND, 'User not found.');
   }
-  if(payload?.userName)
-    user.userName = payload?.userName;
-  if(payload?.password)
-    user.password = payload?.password;
+  if (payload?.userName) user.userName = payload?.userName;
+  if (payload?.password) user.password = payload?.password;
   return user;
 };
 
 const deleteUser = (id: string) => {
   users = users.filter(user => user.id !== parseInt(id));
   return users;
-}
+};
 
 export const UserService = {
   createUser,
   getAllUser,
   getSingleUser,
   updateUser,
-  deleteUser
+  deleteUser,
 };

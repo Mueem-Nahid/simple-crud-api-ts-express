@@ -20,5 +20,5 @@ const updateUserZodSchema = z.object({
 
 export const UserValidation = {
   createUserZodSchema,
-  updateUserZodSchema
+  updateUserZodSchema,
 };

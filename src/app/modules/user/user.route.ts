@@ -15,4 +15,15 @@ router.get('/', UserController.getAllUser);
 
 router.get('/:id', UserController.getUserById);
 
+router.patch(
+  '/:id',
+  validateRequest(UserValidation.updateUserZodSchema),
+  UserController.updateUser
+);
+
+router.delete(
+  '/:id',
+  UserController.deleteUser
+)
+
 export const UserRoutes = router;

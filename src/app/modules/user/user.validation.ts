@@ -11,6 +11,14 @@ const createUserZodSchema = z.object({
   }),
 });
 
+const updateUserZodSchema = z.object({
+  body: z.object({
+    userName: z.string().optional(),
+    password: z.string().optional(),
+  }),
+});
+
 export const UserValidation = {
   createUserZodSchema,
+  updateUserZodSchema
 };

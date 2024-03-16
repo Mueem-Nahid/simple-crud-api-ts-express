@@ -1,0 +1,17 @@
+{
+  "name": "simple-crud-api",
+  "version": "1.0.0",
+  "description": "This is a text project for BiTechX LLC.",
+  "main": "src/server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mueem Nahid",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}

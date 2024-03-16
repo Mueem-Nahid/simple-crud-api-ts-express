@@ -12,8 +12,8 @@ let server: Server;
 // database connection
 async function bootstrap() {
   try {
-    server = app.listen(config.port, () => {
-      console.log(`Server listening on port ${config.port} ...`);
+    server = app.listen(config.port ?? 3000, () => {
+      console.log(`Server listening on port ${config.port ?? 3000} ...`);
     });
   } catch (error) {
     console.log(`Failed to connect database.`, error);
